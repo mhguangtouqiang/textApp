@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小区物业</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<style>
+		body{
+			width: 100%;
+			height: 100%;
+			background: #F0EFF4;
+		}
+		html{
+			font-size: 100px;
+		}
+		.header1{
+			width: 6.4rem;
+			height: 0.78rem;
+			position: relative;
+			background: #fff;
+		}
+		.header1 h5{
+			position: absolute;
+			width: 100%;
+			height: 0.78rem;
+			text-align: center;
+			line-height: 0.78rem !important;
+			font: normal 400 0.32rem "微软雅黑";
+		}
+		.header1 h5 img:nth-child(1){
+			position: absolute;
+			left: 0.27rem;
+			top: 0.27rem;
+			width: 0.22rem;
+			height: 0.26rem;
+		}
+		.header1 h5 img:nth-child(2){
+			position: absolute;
+			right: 0.27rem;
+			top: 0.27rem;
+			width: 0.22rem;
+			height: 0.26rem;
+		}
+
+		.bottom{
+			width: 6.4rem;
+			height:0.99rem;
+			border-top:1px solid #DAD8D9;
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			z-index: 100;
+			background: #F8F6F7;
+		}
+		.bottom1{
+			width: 1.28rem;
+			height: 0.99rem;
+			color: #656565;
+			float: left;
+		}
+		.bottom1:hover{
+			color: #0079FF;
+		}
+		.bottom2:hover{
+			color: #0079FF;
+		}
+		.bottom2{
+			width: 1.28rem;
+			height: 0.99rem;
+			float: left;
+			color: #656565;
+			position: relative;
+		}
+		.bottom2 i{
+			position: absolute;
+			top: -0.33rem;
+			left: 0.3rem;
+			display: block;
+			width: 0.99rem;
+			height: 0.99rem;
+			line-height: 0.99rem;
+			border: 1px solid #D4D2D3;
+			border-radius: 50%;
+			font-size: 0.64rem;
+			background:#F8F6F7; 
+			text-align: center;
+			box-shadow: 0px 2px 1px 0px #DDDADB inset;
+			/*color: #656565;*/
+
+		}
+		.bottom2 h4{
+			position: absolute;
+			bottom: 0.05rem;
+			display: block;
+			width: 1.6rem;
+			font-size: 0.2rem;
+			text-align: center;
+			/*color: #656565;*/
+
+		}
+		.bottom1 i{
+			display: block;
+			width: 1.6rem;
+			padding-top: 0.18rem;
+			height: 0.41rem;
+			font-size: 0.43rem;
+			text-align: center;
+			/*color: #656565;*/
+		}
+		.bottom1 h4{
+			padding-top: 0.1rem;
+			display: block;
+			width: 1.6rem;
+			font-size: 0.2rem;
+			text-align: center;
+			/*color: #656565;*/
+		}
+		.con{
+			width: 6.05rem;
+			height: 3.02rem;
+			margin-top: 0.24rem;
+			margin-bottom: 0.29rem;
+			margin-left: 0.18rem;
+			color: #fff;
+		}
+		.con1{
+			height: 1.46rem;
+		}
+		.con1_1{
+			width: 2.98rem;
+			background: #E66444;
+			float: left;
+		}
+		.con1_2{
+			width: 1.46rem;
+			background: #F09056;
+			float: left;
+			margin-left: 0.07rem;
+		}
+		.con2{
+			margin-top: 0.1rem;
+		}
+		.con2_1{
+			width: 1.46rem;
+			height: 1.46rem;
+			background: #9178AF;
+			float: left;
+		}
+		.con2_2{
+			width: 1.46rem;
+			height: 1.46rem;
+			background: #49A7DA;
+			float: left;
+			margin-left: 0.07rem;
+		}
+		.con1_1 i{
+			display: block;
+			width: 2.98rem;
+			height: 0.62rem;
+			padding-top: 0.5rem;
+			text-align: center;
+		}
+		.con1_2 i{
+			display: block;
+			width: 1.46rem;
+			height: 0.62rem;
+			padding-top: 0.5rem;
+			text-align: center;
+		}
+		.con2_1 i{
+			display: block;
+			width: 1.46rem;
+			height: 0.62rem;
+			padding-top: 0.5rem;
+			text-align: center;
+		}
+		.con2_2 i{
+			display: block;
+			width: 1.46rem;
+			height: 0.62rem;
+			padding-top: 0.5rem;
+			text-align: center;
+		}
+		
+		.con1_1 i img{
+			width: 0.51rem;
+			height: 0.51rem;
+		}
+
+		.p i img{
+			width: 0.51rem;
+			height: 0.51rem;
+		}
+		.q i img{
+			width: 0.69rem;
+			height: 0.58rem;
+		}
+		
+		.con1_2 i img{
+			width: 0.69rem;
+			height: 0.58rem;
+		}
+		
+		
+
+		.con1_1 h4{
+			text-align: center;
+			font: normal 400 0.22rem "微软雅黑";
+		}
+		.con1_2 h4{
+			text-align: center;
+			font: normal 400 0.22rem "微软雅黑";
+		}
+		.con2_1 h4{
+			text-align: center;
+			font: normal 400 0.22rem "微软雅黑";
+		}
+		.con2_2 h4{
+			text-align: center;
+			font: normal 400 0.22rem "微软雅黑";
+		}
+		.h_con{
+			margin-top: 0.29rem;
+			margin-left: 0.21rem;
+			width: 5.98rem;
+			height: 2.37rem;
+			border: 1px solid #D0D0D0;
+			border-radius: 0.05rem;
+			background: #fff;
+			margin-bottom: 0.29rem;
+		}
+		.h_con_l{
+			border-right: 1px solid #D0D0D0;
+			height:2.37rem; 
+			width: 1.98rem;
+			position: relative;
+			float: left;
+		}
+		.h_con_l_1{
+			padding-top: 0.23rem;
+			padding-left: 0.19rem;
+			position: relative;
+		}
+		.h_con_l_1 h4{
+			font: normal 400 0.32rem "微软雅黑";
+			color: #FB9543;
+		}
+		.h_con_l_1 img{
+			width: 0.32rem;
+			height: 0.32rem;
+			position: absolute;
+			top: 0.3rem;
+			left: 0.9rem;
+		}
+		.h_con_l_1 .p1{
+			width: 0.32rem;
+			height: 0.32rem;
+			position: absolute;
+			top: 0.5rem;
+			left: 0.9rem;
+		}
+		.h_con_l_1 .p2{
+			width: 0.32rem;
+			height: 0.32rem;
+			position: absolute;
+			top: 0.3rem;
+			left: 0.9rem;
+		}
+
+		.h_con_l_2{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 1.98rem;
+			height: 1.26rem;
+		}
+		.h_con_l_2_1{
+			position: absolute;
+			bottom: 0.04rem;
+			left: 0.04rem;
+			z-index: 5;
+		}
+		.h_con_l_2_1 img{
+			width: 0.31rem;
+			height: 0.31rem;
+			float: left;
+		}
+
+		.h_con_l_2_2{
+			position: absolute;
+			bottom: 0rem;
+			right: 0rem;
+		}
+		.h_con_l_2_2 img{
+			position: absolute;
+			bottom: 0rem;
+			right: 0rem;
+			width: 1.33rem;
+			height: 1.26rem;
+		}
+		.h_con_r{
+			width: 1.98rem;
+			height: 2.36rem;
+			border-right: 1px solid #ECECEC;
+			float: left;
+		}
+		.h_con_r1{
+			width: 1.98rem;
+			height: 2.36rem;
+			float: left;
+		}
+
+		.h_con_r h4{
+			width: 1.98rem;
+			height: 0.79rem;
+			text-align: center;
+			line-height: 0.79rem !important;
+			font: normal 400 0.22rem "微软雅黑";
+			border-bottom: 1px solid #ECECEC;
+		}
+		.h_con_r1 h4{
+			width: 1.99rem;
+			height: 0.79rem;
+			text-align: center;
+			line-height: 0.79rem !important;
+			border-bottom: 1px solid #ECECEC;
+			font: normal 400 0.22rem "微软雅黑";
+		}
+
+	</style>
+</head>
+<body style="width:100%;height:100%">
+	<div class="header1">
+		<h5>
+			小区物业
+			<img src="../image/bmzy1_031.png" alt="">
+			<img src="../image/bmzy1_05.png" alt="">
+		</h5>
+	</div>
+	<div class="con">
+		<div class="con1">
+			<div class="con1 con1_1">
+				<i>
+					<img src="../image/bmzy12_10.png" alt="">
+				</i>
+				<h4>团上团下</h4>
+			</div>
+			<div class="con1 con1_2">
+				<i>
+					<img src="../image/bmzy1_1_10_10.png" alt="">
+				</i>
+				<h4>在线订餐</h4>
+			</div>
+			<a href="bxsq.html" style="color: #fff">
+				<div class="con1 con1_2" style="background:#A2C159;">
+					<i>
+						<img src="../image/bmzy1_16.png" alt="">
+					</i>
+					<h4>报修申请</h4>
+				</div>
+			</a>
+		</div>
+		<div class="con2">
+			<div class="con2_1 p">
+				<i>
+					<img src="../image/bmzy11_22.png" alt="">
+				</i>
+				<h4>地铁线路</h4>
+			</div>
+			<div class="con2_2 p" style="background:#49A7DA">
+				<i>
+					<img src="../image/bmzy1_10.png" alt="">
+				</i>
+				<h4>公交站点</h4>
+			</div>
+			<a href="shequchashi.html" style="color: #fff">
+				<div class="con2_2 q" style="background:#56BC8A">
+					<i>
+						<img src="../image/bmzy11_10_10.png" alt="">
+					</i>
+					<h4>社区超市</h4>
+				</div>
+			</a>
+			<a href="jinriyouhui.html" style="color: #fff">
+				<div class="con2_2 p" style="background:#D179AD">
+					<i>
+						<img src="../image/bmzy1_13.png" alt="">
+					</i>
+					<h4>今日优惠</h4>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="h_con"> <!-- 生活小助手 -->
+		<div class="h_con_l">
+			<a href="xiaozhushou.html">
+				<div class="h_con_l_1">
+					<h4>生活</h4>
+					<h4>小助手</h4>
+					<img src="../image/bmzy1_22.png" alt="">
+				</div>
+			</a>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+					<img src="../image/bmzy11_03_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy1_26.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<a href="dingnai.html" style="color: #000;"><h4>订奶</h4></a>
+			<h4>家政</h4>
+			<h4>开锁</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>送水</h4>
+			<h4>快递</h4>
+			<h4>疏通</h4>
+		</div>  
+	</div>
+	<div class="h_con"><!-- 居家服务 -->
+		<div class="h_con_l">
+			<div class="h_con_l_1">
+				<h4 style="color:#87BE31">居家</h4>
+				<h4 style="color:#87BE31">服务</h4>
+				<img src="../image/bmzy1_07.png" alt="" class="p1">
+			</div>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy1_11.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<h4>超市</h4>
+			<h4>医院</h4>
+			<h4>银行</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>药店</h4>
+			<h4>ATM</h4>
+			<h4>厕所</h4>
+		</div>  
+	</div>
+	<div class="h_con"><!-- 美食餐饮 -->
+		<div class="h_con_l">
+			<a href="shanghuxingxi.html">
+				<div class="h_con_l_1">
+					<h4 style="color:#EBA7A6">美食</h4>
+					<h4 style="color:#EBA7A6">餐饮</h4>
+					<img src="../image/bmzy1_013.png" alt="" class="p1">
+				</div>
+			</a>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+					<img src="../image/bmzy11_03_03.png" alt="">
+					<img src="../image/bmzy1_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy11_3_03.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<h4>西餐</h4>
+			<h4>小吃快餐</h4>
+			<h4>火锅</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>中餐</h4>
+			<h4>川菜</h4>
+			<h4>韩国料理</h4>
+		</div>   
+	</div>
+	<div class="h_con"><!-- 休闲娱乐 -->
+		<div class="h_con_l">
+			<div class="h_con_l_1">
+				<h4 style="color:#98BBE0">休闲</h4>
+				<h4 style="color:#98BBE0">娱乐</h4>
+				<img src="../image/bmzy1_106.png" alt="" class="p1">
+			</div>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+					<img src="../image/bmzy11_03_03.png" alt="">
+					<img src="../image/bmzy1_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy1107.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<h4>电影院</h4>
+			<h4>酒吧</h4>
+			<h4>丽人</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>KTV</h4>
+			<h4>咖啡店</h4>
+			<h4>洗浴</h4>
+		</div>   
+	</div>
+	<div class="h_con"><!-- 交通设施 -->
+		<div class="h_con_l">
+			<div class="h_con_l_1">
+				<h4 style="color:#9AA0C3">交通</h4>
+				<h4 style="color:#9AA0C3">设施</h4>
+				<img src="../image/bmzy1_108.png" alt="" class="p1">
+			</div>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+					<img src="../image/bmzy11_03_03.png" alt="">
+					<img src="../image/bmzy1_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy11_11.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<h4>公交站</h4>
+			<h4>火车代售点</h4>
+			<h4>停车场</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>加油站</h4>
+			<h4>长途汽车站</h4>
+			<h4>火车站</h4>
+		</div>   
+	</div>
+	<div class="h_con" style="margin-bottom:1.44rem"><!-- 酒店 -->
+		<div class="h_con_l">
+			<div class="h_con_l_1">
+				<h4 style="color:#EBB977">酒店</h4>
+				<img src="../image/bmzy1_110.png" alt="" class="p2">
+			</div>
+			<div class="h_con_l_2">
+				<div class="h_con_l_2_1">
+					<img src="../image/bmzy11_03.png" alt="">
+					<img src="../image/bmzy11_03_03.png" alt="">
+					<img src="../image/bmzy1_03.png" alt="">
+				</div>
+				<div class="h_con_l_2_2">
+					<img src="../image/bmzy1_14.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="h_con_r">
+			<h4>快捷酒店</h4>
+			<h4>青年旅社</h4>
+			<h4>特价酒店</h4>
+		</div>
+		<div class="h_con_r1">
+			<h4>星级酒店</h4>
+			<h4>招待所</h4>
+			<h4>旅馆</h4>
+		</div>   
+	</div>
+	
+	<div class="bottom">
+		<a href="shanghuxingxi.html">
+			<div class="bottom1">
+				<i class="fa fa-home"></i>
+				<h4>首页</h4>
+			</div>
+		</a>
+		<a href="bmzy.html">
+			<div class="bottom1">
+				<i class="fa fa-coffee" aria-hidden="true"></i>
+				<h4>便民</h4>
+			</div>
+		</a>
+		<div class="bottom2">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+			<h4>一键拨号</h4>
+		</div>
+		<a href="sheququ.html">
+			<div class="bottom1">
+				<i class="fa fa-building" aria-hidden="true"></i>
+				<h4>社区</h4>
+			</div>
+		</a>
+		<a href="geren.html">   <!-- 个人中心 -->
+			<div class="bottom1">   
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<h4>我的</h4>
+			</div>
+		</a>
+	</div>
+</body>
+<script src="../script/zepto-1.1.6.min.js"></script>
+<script src="../script/touch.js"></script>
+<script src="../script/setRem.js"></script>
+<script>
+	$(".header1 img").tap(function (){
+		window.history.back();
+	})
+</script>
+</body>
+</html>

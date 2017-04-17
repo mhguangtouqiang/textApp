@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>报修信息</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../swiper/swiper-3.4.1.min.css">
+	<style>
+		.header1 div{
+			position: absolute;
+			top: 0.25rem;
+			right: 0.27rem;
+			border: 1px solid #C9C9C9;
+			width: 0.8rem;
+			height: 0.39rem;
+			text-align: center;
+			line-height: 0.39rem !important;
+			font: normal 400 0.22rem "微软雅黑";
+			background: #F3F3F3;
+		}
+		.main{
+			width: 5.79rem;
+			height: 4.33rem;
+			border: 1px solid #DDDCDE;
+			border-radius: 0.1rem;
+			margin-top: 0.33rem;
+			margin-left: 0.28rem;
+			background: #fff;
+		}
+		.con{
+			padding: 0rem 0.13rem;
+		}
+		.con1{
+			padding: 0.2rem 0rem;
+			border-bottom: 2px solid #C6C6C6;
+			font: normal 400 0.32rem "微软雅黑";
+		}
+		.con2_1{
+			padding-top: 0.27rem;
+			padding-bottom: 0.45rem;
+			height: 0.99rem;
+			border-bottom: 1px solid #C6C6C6;
+			font: normal 400 0.22rem "微软雅黑";
+			color: #545454;
+		}
+		.con2_1_2{
+			overflow: hidden;
+			width: 4.82rem;
+		}
+		.con2_1_2_1{
+			float: left;
+		}
+		.con2_1_2_2{
+			float: right;
+		}
+		.opc{
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			margin-left: -1.965rem;
+			margin-top: -0.71rem;
+			width: 3.93rem;
+			height: 1.42rem;
+			background: rgba(0,0,0,0.5);
+			line-height: 1.42rem !important;
+			text-align: center;
+			color: #fff;
+			font: normal 400 0.22rem "黑体";
+			display: none;
+		}
+	</style>
+</head>
+<body style="width:100%;height:100%">
+	<div class="header1">
+		<h5>
+			保修信息
+			<img src="../image/sqcs_03.png" alt="">
+			<div>
+				报修
+			</div>
+		</h5>
+	</div>
+	<div class="main" id="content">
+		<div class="con">
+			<h4 class="con1">您提交的信息</h4>
+			<div class="con2">
+				<div class="con2_1">
+					<div class="con2_1_1">报修产品: <span id="product"></span></div>
+					<div class="con2_1_2">
+						<div class="con2_1_2_1">要求服务日期: <span id="time"></span></div>
+						<div class="con2_1_2_2"><span id="time1"></span></div>
+					</div>
+					<div class="con2_1_3">要求描述:<p id="service"></p></div>
+				</div>
+				<div class="con2_1" style="border:none">
+					<div class="con2_1_1">用户姓名:笑笑</div>
+					<div class="con2_1_2">
+						<div class="con2_1_2_1">手机号码:13681312547</div>
+					</div>
+					<div class="con2_1_3">详细地址:A单元40</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="opc">
+		恭喜您表单提交成功!
+	</div>
+	<div class="bottom">
+		<a href="fanan.html">
+			<div class="bottom1">
+				<i class="fa fa-home"></i>
+				<h4>首页</h4>
+			</div>
+		</a>
+		<a href="bmzy.html">
+			<div class="bottom1">
+				<i class="fa fa-coffee" aria-hidden="true"></i>
+				<h4>便民</h4>
+			</div>
+		</a>
+		<div class="bottom2">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+			<h4>一键拨号</h4>
+		</div>
+		<a href="sheququ.html">
+			<div class="bottom1">
+				<i class="fa fa-building" aria-hidden="true"></i>
+				<h4>社区</h4>
+			</div>
+		</a>
+		<a href="personal.html">   <!-- 个人中心 -->
+			<div class="bottom1">   
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<h4>我的</h4>
+			</div>
+		</a>
+	</div>
+</body>
+<script src="../script/zepto-1.1.6.min.js"></script>
+<script src="../script/touch.js"></script>
+<script src="../script/setRem.js"></script>
+<script>
+	$(function (){
+		$(".header1 div").tap(function (){
+			$(".opc").css("display","block");
+			setTimeout(function (){
+				$(".opc").css("display","none");
+			},2000)
+		})
+		$(".header1 img").tap(function (){
+			window.history.back();
+		})
+		var product = document.getElementById('product');
+		var time = document.getElementById('time');
+		var time1 = document.getElementById('time1');
+		var service = document.getElementById('service');
+		function getlocalStorage(c_name){
+			if (localStorage.getItem(c_name))
+			  {
+			    return localStorage.getItem(c_name);
+			  }
+			return "";
+		}
+		product.innerHTML = getlocalStorage('product')
+		time.innerHTML = getlocalStorage('time')
+		time1.innerHTML = getlocalStorage('time1')
+		service.innerHTML = getlocalStorage('service')
+	})
+
+</script>
+
+</body>
+</html>
